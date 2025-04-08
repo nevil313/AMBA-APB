@@ -9,7 +9,6 @@ This repository contains a Verilog-based implementation and simulation of the AM
 - [Features](#features)
 - [Protocol Description](#protocol-description)
 - [Simulation Setup](#simulation-setup)
-- [Waveform Results](#waveform-results)
 - [Tools Used](#tools-used)
 - [License](#license)
 
@@ -31,5 +30,72 @@ This project showcases a basic RTL design of the AMBA APB protocol using Verilog
 
 ---
 
+---
+
+## 📘 Protocol Description
+
+The AMBA APB protocol includes the following primary signals:
+
+- `PCLK` : Clock signal
+- `PRESETn` : Active-low reset
+- `PADDR` : Address bus
+- `PWDATA` : Write data bus
+- `PRDATA` : Read data bus
+- `PWRITE` : Write/read control
+- `PSEL` : Slave select
+- `PENABLE` : Enable signal for data transfer phase
+- `PREADY` : Slave ready signal
+- `PSLVERR` : Error signal (optional)
+
+### APB Transfer Phases:
+1. **Setup Phase**: Master drives `PADDR`, `PWDATA`, `PWRITE`, `PSEL=1`, and `PENABLE=0`
+2. **Enable Phase**: Master sets `PENABLE=1` and waits for `PREADY=1` from the slave
+3. **Completion**: Slave responds with `PRDATA` for read or accepts `PWDATA` for write
+
+---
+
+## ⚙️ Simulation Setup
+
+To run the simulation:
+
+1. Clone this repository:
+```bash
+git clone https://github.com/nevil313/AMBA-APB.git
+cd AMBA-APB
+
+---
+
+## 📘 Protocol Description
+
+The AMBA APB protocol includes the following primary signals:
+
+- `PCLK` : Clock signal
+- `PRESETn` : Active-low reset
+- `PADDR` : Address bus
+- `PWDATA` : Write data bus
+- `PRDATA` : Read data bus
+- `PWRITE` : Write/read control
+- `PSEL` : Slave select
+- `PENABLE` : Enable signal for data transfer phase
+- `PREADY` : Slave ready signal
+- `PSLVERR` : Error signal (optional)
+
+### APB Transfer Phases:
+1. **Setup Phase**: Master drives `PADDR`, `PWDATA`, `PWRITE`, `PSEL=1`, and `PENABLE=0`
+2. **Enable Phase**: Master sets `PENABLE=1` and waits for `PREADY=1` from the slave
+3. **Completion**: Slave responds with `PRDATA` for read or accepts `PWDATA` for write
+
+---
+
+## ⚙️ Simulation Setup
+
+To run the simulation:
+
+1. Clone this repository:
+```bash
+git clone https://github.com/nevil313/AMBA-APB.git
+cd AMBA-APB
+
+s
 
 

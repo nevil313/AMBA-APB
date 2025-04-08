@@ -1,4 +1,4 @@
-**#AMBA APB Protocol Implementation in Verilog:**
+**AMBA APB Protocol Implementation in Verilog:**
 
 Welcome to the AMBA APB (Advanced Microcontroller Bus Architecture - Advanced Peripheral Bus) Protocol implementation! This repository contains a Verilog-based simulation of the AMBA APB protocol, commonly used in SoC (System on Chip) designs for connecting low-speed peripherals.
 
